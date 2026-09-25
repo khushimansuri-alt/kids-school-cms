@@ -1,0 +1,147 @@
+media:
+  input: src/img
+  output: /img
+
+content:
+  - name: home
+    label: "🏠 Home Page"
+    type: file
+    path: src/index.njk
+    fields:
+      - { name: badge, label: "Top badge text", type: string }
+      - { name: hero_heading, label: "Hero heading", type: string }
+      - { name: hero_text, label: "Hero paragraph", type: text }
+      - { name: hero_emoji, label: "Hero emoji", type: string }
+      - name: stats
+        label: "Trust strip stats (3 numbers)"
+        type: list
+        fields:
+          - { name: number, label: "Number", type: string }
+          - { name: label, label: "Label", type: string }
+      - { name: features_heading, label: "Features section heading", type: string }
+      - { name: features_subtext, label: "Features section subtext", type: text }
+      - name: features
+        label: "Feature cards"
+        type: list
+        fields:
+          - { name: icon, label: "Emoji icon", type: string }
+          - { name: title, label: "Title", type: string }
+          - { name: text, label: "Text", type: text }
+      - { name: programs_heading, label: "Programs section heading", type: string }
+      - { name: programs_subtext, label: "Programs section subtext", type: text }
+      - name: programs
+        label: "Program cards"
+        type: list
+        fields:
+          - { name: age, label: "Age tag", type: string }
+          - { name: title, label: "Program name", type: string }
+          - { name: text, label: "Description", type: text }
+          - { name: colorClass, label: "Color", type: select, options: ["program-playgroup", "program-nursery", "program-primary"] }
+      - { name: testimonials_heading, label: "Testimonials heading", type: string }
+      - name: testimonials
+        label: "Parent testimonials"
+        type: list
+        fields:
+          - { name: quote, label: "Quote", type: text }
+          - { name: name, label: "Parent name", type: string }
+          - { name: role, label: "Role / relation", type: string }
+      - { name: cta_heading, label: "Bottom CTA heading", type: string }
+      - { name: cta_text, label: "Bottom CTA text", type: text }
+      - { name: cta_button_text, label: "CTA button text", type: string }
+      - { name: cta_button_link, label: "CTA button link", type: string }
+
+  - name: about
+    label: "ℹ️ About Page"
+    type: file
+    path: src/about.njk
+    fields:
+      - { name: badge, label: "Top badge text", type: string }
+      - { name: hero_heading, label: "Hero heading", type: string }
+      - { name: hero_text, label: "Hero paragraph", type: text }
+      - { name: approach_heading, label: "Approach heading", type: string }
+      - { name: approach_text_1, label: "Approach paragraph 1", type: text }
+      - { name: approach_text_2, label: "Approach paragraph 2", type: text }
+      - name: values
+        label: "School values"
+        type: list
+        fields:
+          - { name: number, label: "Number", type: string }
+          - { name: title, label: "Title", type: string }
+          - { name: text, label: "Text", type: text }
+          - { name: color, label: "Dot color (CSS value)", type: string }
+      - { name: teachers_heading, label: "Teachers section heading", type: string }
+      - { name: teachers_subtext, label: "Teachers section subtext", type: text }
+      - name: teachers
+        label: "Teacher / staff cards"
+        type: list
+        fields:
+          - { name: icon, label: "Emoji icon", type: string }
+          - { name: name, label: "Name", type: string }
+          - { name: text, label: "Description", type: text }
+      - { name: cta_heading, label: "Bottom CTA heading", type: string }
+      - { name: cta_text, label: "Bottom CTA text", type: text }
+      - { name: cta_button_text, label: "CTA button text", type: string }
+      - { name: cta_button_link, label: "CTA button link", type: string }
+
+  - name: admissions
+    label: "📝 Admissions Page"
+    type: file
+    path: src/admissions.njk
+    fields:
+      - { name: badge, label: "Top badge text", type: string }
+      - { name: hero_heading, label: "Hero heading", type: string }
+      - { name: hero_text, label: "Hero paragraph", type: text }
+      - name: steps
+        label: "Admission steps"
+        type: list
+        fields:
+          - { name: title, label: "Step title", type: string }
+          - { name: text, label: "Step description", type: text }
+      - { name: fees_heading, label: "Fees section heading", type: string }
+      - { name: fees_subtext, label: "Fees section subtext", type: text }
+      - name: fees
+        label: "Fee table rows"
+        type: list
+        fields:
+          - { name: program, label: "Program name", type: string }
+          - { name: age, label: "Age group", type: string }
+          - { name: fee, label: "Monthly fee", type: string }
+          - { name: timing, label: "Timing", type: string }
+      - { name: cta_heading, label: "Bottom CTA heading", type: string }
+      - { name: cta_text, label: "Bottom CTA text", type: text }
+      - { name: cta_button_text, label: "CTA button text", type: string }
+      - { name: cta_button_link, label: "CTA button link", type: string }
+
+  - name: gallery
+    label: "🖼️ Gallery Page"
+    type: file
+    path: src/gallery.njk
+    fields:
+      - { name: badge, label: "Top badge text", type: string }
+      - { name: hero_heading, label: "Hero heading", type: string }
+      - { name: hero_text, label: "Hero paragraph", type: text }
+      - name: tiles
+        label: "Gallery tiles"
+        type: list
+        fields:
+          - { name: emoji, label: "Emoji", type: string }
+          - { name: label, label: "Label", type: string }
+          - { name: color, label: "Tile color", type: select, options: ["tile-1", "tile-2", "tile-3", "tile-4", "tile-5", "tile-6", "tile-7", "tile-8"] }
+      - { name: cta_heading, label: "Bottom CTA heading", type: string }
+      - { name: cta_text, label: "Bottom CTA text", type: text }
+      - { name: cta_button_text, label: "CTA button text", type: string }
+      - { name: cta_button_link, label: "CTA button link", type: string }
+
+  - name: contact
+    label: "📞 Contact Page"
+    type: file
+    path: src/contact.njk
+    fields:
+      - { name: badge, label: "Top badge text", type: string }
+      - { name: hero_heading, label: "Hero heading", type: string }
+      - { name: hero_text, label: "Hero paragraph", type: text }
+      - { name: address, label: "Address", type: string }
+      - { name: phone, label: "Phone (for tel: link, no spaces)", type: string }
+      - { name: phone_display, label: "Phone (display format)", type: string }
+      - { name: email, label: "Email", type: string }
+      - { name: hours, label: "School hours", type: string }

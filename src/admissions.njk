@@ -1,0 +1,99 @@
+---
+layout: base.njk
+title: Admissions
+nav: admissions
+badge: "2026–27 seats open"
+hero_heading: "Joining Little Sparks is simpler than you'd think."
+hero_text: "Four steps, most families are done within two weeks. No exams for anyone under 6 — just a friendly visit and a conversation."
+
+steps:
+  - title: "Book a visit"
+    text: "Walk through a real classroom, meet the teachers, and see a normal school day in action."
+  - title: "Submit the form"
+    text: "A short form with your child's age, any allergies, and your preferred program."
+  - title: "Meet-and-greet"
+    text: "A relaxed 20-minute chat between your child, a teacher, and you — no tests involved."
+  - title: "Welcome aboard"
+    text: "Confirm the seat, pick a start date, and we'll send over a settling-in guide."
+
+fees_heading: "Fees by program"
+fees_subtext: "Fees include meals, materials, and all regular activities. No hidden charges."
+fees:
+  - program: "Playgroup"
+    age: "2–3 years"
+    fee: "₹6,500"
+    timing: "8:30am – 12:30pm"
+  - program: "Nursery"
+    age: "4–5 years"
+    fee: "₹7,800"
+    timing: "8:00am – 2:00pm"
+  - program: "Primary Steps"
+    age: "6–8 years"
+    fee: "₹9,200"
+    timing: "8:00am – 3:00pm"
+
+cta_heading: "Seats fill up early in the year."
+cta_text: "Reach out today and we'll set up a visit within the week."
+cta_button_text: "Get In Touch"
+cta_button_link: "/contact/"
+---
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow-badge">{{ badge }}</span>
+    <h1>{{ hero_heading }}</h1>
+    <p>{{ hero_text }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="steps-list">
+      {% for s in steps %}
+      <div class="step-row">
+        <div class="step-num">{{ loop.index }}</div>
+        <div>
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.text }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head center">
+      <h2>{{ fees_heading }}</h2>
+      <p style="margin-left:auto;margin-right:auto;">{{ fees_subtext }}</p>
+    </div>
+    <table class="fee-table">
+      <thead>
+        <tr>
+          <th>Program</th>
+          <th>Age group</th>
+          <th>Monthly fee</th>
+          <th>Timing</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in fees %}
+        <tr>
+          <td>{{ row.program }}</td>
+          <td>{{ row.age }}</td>
+          <td>{{ row.fee }}</td>
+          <td>{{ row.timing }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="cta-banner">
+    <h2>{{ cta_heading }}</h2>
+    <p>{{ cta_text }}</p>
+    <a href="{{ cta_button_link }}" class="btn btn-light">{{ cta_button_text }}</a>
+  </div>
+</section>

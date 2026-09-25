@@ -1,0 +1,86 @@
+---
+layout: base.njk
+title: Gallery
+nav: gallery
+badge: "Life at Little Sparks"
+hero_heading: "A few moments from a normal week."
+hero_text: "Replace these color tiles with real photos of your classrooms, playground, and events once you're ready to launch."
+
+tiles:
+  - color: "tile-1"
+    emoji: "🖍️"
+    label: "Art Corner"
+  - color: "tile-2"
+    emoji: "🧸"
+    label: "Story Time"
+  - color: "tile-3"
+    emoji: "☀️"
+    label: "Morning Circle"
+  - color: "tile-4"
+    emoji: "🌻"
+    label: "Garden Play"
+  - color: "tile-5"
+    emoji: "📚"
+    label: "Reading Nook"
+  - color: "tile-6"
+    emoji: "⚽"
+    label: "Playground"
+  - color: "tile-7"
+    emoji: "🎵"
+    label: "Music Circle"
+  - color: "tile-8"
+    emoji: "🐛"
+    label: "Nature Walk"
+  - color: "tile-1"
+    emoji: "🎂"
+    label: "Birthday Day"
+  - color: "tile-2"
+    emoji: "🍎"
+    label: "Lunchtime"
+  - color: "tile-3"
+    emoji: "🧪"
+    label: "Little Scientists"
+  - color: "tile-4"
+    emoji: "🎭"
+    label: "Puppet Show"
+
+cta_heading: "Want to see all this in person?"
+cta_text: "Photos only tell half the story — come hear the noise and laughter for yourself."
+cta_button_text: "Book a Visit"
+cta_button_link: "/admissions/"
+---
+<style>
+  .full-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 160px;
+    gap: 1rem;
+  }
+  @media (max-width: 900px) { .full-gallery { grid-template-columns: repeat(2, 1fr); } }
+</style>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow-badge">{{ badge }}</span>
+    <h1>{{ hero_heading }}</h1>
+    <p>{{ hero_text }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="full-gallery">
+      {% for t in tiles %}
+      <div class="tile {{ t.color }}">{{ t.emoji }} {{ t.label }}</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="cta-banner" style="background:var(--sky);">
+    <h2>{{ cta_heading }}</h2>
+    <p>{{ cta_text }}</p>
+    <a href="{{ cta_button_link }}" class="btn btn-light">{{ cta_button_text }}</a>
+  </div>
+</section>

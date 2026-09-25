@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }} — Little Sparks Kids School</title>
+<meta name="description" content="{{ meta_description or 'A play-first school for ages 2 to 8, where little sparks grow into confident learners.' }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="/" class="logo">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 2 L23 15 L36 18 L23 21 L20 34 L17 21 L4 18 L17 15 Z" fill="#FF6B6B"/>
+      </svg>
+      Little Sparks
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a href="/" {% if nav == "home" %}aria-current="page"{% endif %}>Home</a></li>
+      <li><a href="/about/" {% if nav == "about" %}aria-current="page"{% endif %}>About Us</a></li>
+      <li><a href="/admissions/" {% if nav == "admissions" %}aria-current="page"{% endif %}>Admissions</a></li>
+      <li><a href="/gallery/" {% if nav == "gallery" %}aria-current="page"{% endif %}>Gallery</a></li>
+      <li><a href="/contact/" {% if nav == "contact" %}aria-current="page"{% endif %}>Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+{{ content | safe }}
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <svg viewBox="0 0 40 40" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 2 L23 15 L36 18 L23 21 L20 34 L17 21 L4 18 L17 15 Z" fill="#FFC93C"/>
+          </svg>
+          Little Sparks Kids School
+        </div>
+        <p style="color:#c9d3d6;">A play-first school for ages 2–8, open Monday to Friday, 8am–3pm.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="/about/">About Us</a>
+        <a href="/admissions/">Admissions</a>
+        <a href="/gallery/">Gallery</a>
+        <a href="/contact/">Contact</a>
+      </div>
+      <div>
+        <h4>Visit Us</h4>
+        <a href="/contact/">{{ site_address or "12 Maple Grove Lane" }}</a>
+        <a href="tel:{{ site_phone or '+910000000000' }}">{{ site_phone_display or "+91 00000 00000" }}</a>
+        <a href="mailto:{{ site_email or 'hello@littlesparks.school' }}">{{ site_email or "hello@littlesparks.school" }}</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Little Sparks Kids School. Made with care, crayons, and a little chaos.</div>
+  </div>
+</footer>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
