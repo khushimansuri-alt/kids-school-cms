@@ -14,7 +14,8 @@ content:
       - { name: hero_emoji, label: "Hero emoji", type: string }
       - name: stats
         label: "Trust strip stats (3 numbers)"
-        type: list
+        type: object
+        list: true
         fields:
           - { name: number, label: "Number", type: string }
           - { name: label, label: "Label", type: string }
@@ -22,7 +23,8 @@ content:
       - { name: features_subtext, label: "Features section subtext", type: text }
       - name: features
         label: "Feature cards"
-        type: list
+        type: object
+        list: true
         fields:
           - { name: icon, label: "Emoji icon", type: string }
           - { name: title, label: "Title", type: string }
@@ -31,7 +33,8 @@ content:
       - { name: programs_subtext, label: "Programs section subtext", type: text }
       - name: programs
         label: "Program cards"
-        type: list
+        type: object
+        list: true
         fields:
           - { name: age, label: "Age tag", type: string }
           - { name: title, label: "Program name", type: string }
@@ -40,7 +43,8 @@ content:
       - { name: testimonials_heading, label: "Testimonials heading", type: string }
       - name: testimonials
         label: "Parent testimonials"
-        type: list
+        type: object
+        list: true
         fields:
           - { name: quote, label: "Quote", type: text }
           - { name: name, label: "Parent name", type: string }
@@ -63,7 +67,8 @@ content:
       - { name: approach_text_2, label: "Approach paragraph 2", type: text }
       - name: values
         label: "School values"
-        type: list
+        type: object
+        list: true
         fields:
           - { name: number, label: "Number", type: string }
           - { name: title, label: "Title", type: string }
@@ -73,7 +78,8 @@ content:
       - { name: teachers_subtext, label: "Teachers section subtext", type: text }
       - name: teachers
         label: "Teacher / staff cards"
-        type: list
+        type: object
+        list: true
         fields:
           - { name: icon, label: "Emoji icon", type: string }
           - { name: name, label: "Name", type: string }
@@ -93,7 +99,8 @@ content:
       - { name: hero_text, label: "Hero paragraph", type: text }
       - name: steps
         label: "Admission steps"
-        type: list
+        type: object
+        list: true
         fields:
           - { name: title, label: "Step title", type: string }
           - { name: text, label: "Step description", type: text }
@@ -101,7 +108,8 @@ content:
       - { name: fees_subtext, label: "Fees section subtext", type: text }
       - name: fees
         label: "Fee table rows"
-        type: list
+        type: object
+        list: true
         fields:
           - { name: program, label: "Program name", type: string }
           - { name: age, label: "Age group", type: string }
@@ -122,7 +130,8 @@ content:
       - { name: hero_text, label: "Hero paragraph", type: text }
       - name: tiles
         label: "Gallery tiles"
-        type: list
+        type: object
+        list: true
         fields:
           - { name: emoji, label: "Emoji", type: string }
           - { name: label, label: "Label", type: string }
