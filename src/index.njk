@@ -1,173 +1,70 @@
 ---
-layout: base.njk
-title: Home
-nav: home
-badge: "Now enrolling for 2025–26 🌤️"
-hero_heading: "Where every little spark gets room to grow."
-hero_text: "Little Sparks is a play-first school for children aged 2 to 8, built around curiosity, kindness, and a whole lot of giggling. Come see what a school day should feel like."
-hero_emoji: "🧒🎨"
-
+badge: Now enrolling for 2025–26 🌤️
+hero_heading: Littile Sparks School Where every little spark gets room to grow.
+hero_text: Little Sparks is a play-first school for children aged 2 to 8, built
+  around curiosity, kindness, and a whole lot of giggling. Come see what a
+  school day should feel like.
+hero_emoji: 🧒🎨
 stats:
-  - number: "15 yrs"
-    label: "of nurturing young minds"
-  - number: "320+"
-    label: "happy little sparks so far"
-  - number: "1:8"
-    label: "teacher to student ratio"
-
-features_heading: "Why families choose us"
-features_subtext: "A few things that make a Little Sparks day different from an ordinary school day."
+  - number: 15 yrs
+    label: of nurturing young minds
+  - number: 320+
+    label: happy little sparks so far
+  - number: 1:8
+    label: teacher to student ratio
+features_heading: Why families choose us
+features_subtext: A few things that make a Little Sparks day different from an
+  ordinary school day.
 features:
-  - icon: "🎨"
-    title: "Play-first learning"
-    text: "Half the day is guided play — because that's how young children actually learn best."
-  - icon: "🌱"
-    title: "Outdoor time, daily"
-    text: "Rain or shine, every class spends real time outside in our garden and sandpit."
-  - icon: "👩‍🏫"
-    title: "Small class sizes"
-    text: "No more than 16 children per class, with two teachers who know every name."
-  - icon: "🍎"
-    title: "Fresh, home-style meals"
-    text: "Snacks and lunch cooked on-site every morning, with allergy-aware menus."
-
-programs_heading: "Programs by age group"
-programs_subtext: "Each stage has its own pace, room, and rhythm."
+  - icon: 🎨
+    title: Play-first learning
+    text: Half the day is guided play — because that's how young children actually
+      learn best.
+  - icon: 🌱
+    title: Outdoor time, daily
+    text: Rain or shine, every class spends real time outside in our garden and
+      sandpit.
+  - icon: 👩‍🏫
+    title: Small class sizes
+    text: No more than 16 children per class, with two teachers who know every name.
+  - icon: 🍎
+    title: Fresh, home-style meals
+    text: Snacks and lunch cooked on-site every morning, with allergy-aware menus.
+programs_heading: Programs by age group
+programs_subtext: Each stage has its own pace, room, and rhythm.
 programs:
-  - colorClass: "program-playgroup"
-    age: "Ages 2–3"
-    title: "Playgroup"
-    text: "Gentle first steps away from home — songs, sensory play, and lots of cuddly reassurance."
-  - colorClass: "program-nursery"
-    age: "Ages 4–5"
-    title: "Nursery"
-    text: "Letters, numbers, and friendships start here, through stories and hands-on projects."
-  - colorClass: "program-primary"
-    age: "Ages 6–8"
-    title: "Primary Steps"
-    text: "Reading, writing, and early science — building real confidence, one question at a time."
-
-testimonials_heading: "What parents tell us"
+  - age: Ages 2–3
+    title: Playgroup
+    text: Gentle first steps away from home — songs, sensory play, and lots of
+      cuddly reassurance.
+    colorClass: program-playgroup
+  - age: Ages 4–5
+    title: Nursery
+    text: Letters, numbers, and friendships start here, through stories and hands-on
+      projects.
+    colorClass: program-nursery
+  - age: Ages 6–8
+    title: Primary Steps
+    text: Reading, writing, and early science — building real confidence, one
+      question at a time.
+    colorClass: program-primary
+testimonials_heading: What parents tell us
 testimonials:
-  - quote: "My daughter used to cry at drop-off everywhere else. Here, she runs in without looking back."
-    name: "Priya M."
-    role: "Parent of a Nursery student"
-  - quote: "The teachers actually know my son's moods, not just his name. That says everything."
-    name: "Arjun K."
-    role: "Parent of a Primary Steps student"
-  - quote: "Small things like garden time and home-cooked lunch make a huge difference day to day."
-    name: "Fatima S."
-    role: "Parent of two Little Sparks students"
-
-cta_heading: "Come see a class in session."
-cta_text: "The best way to know if we're the right fit is to visit — no pressure, no paperwork on day one."
-cta_button_text: "Schedule a Visit"
-cta_button_link: "/admissions/"
+  - quote: My daughter used to cry at drop-off everywhere else. Here, she runs in
+      without looking back.
+    name: Priya M.
+    role: Parent of a Nursery student
+  - quote: The teachers actually know my son's moods, not just his name. That says
+      everything.
+    name: Arjun K.
+    role: Parent of a Primary Steps student
+  - quote: Small things like garden time and home-cooked lunch make a huge
+      difference day to day.
+    name: Fatima S.
+    role: Parent of two Little Sparks students
+cta_heading: Come see a class in session.
+cta_text: The best way to know if we're the right fit is to visit — no pressure,
+  no paperwork on day one.
+cta_button_text: Schedule a Visit
+cta_button_link: /admissions/
 ---
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="eyebrow-badge">{{ badge }}</span>
-      <h1>{{ hero_heading }}</h1>
-      <p>{{ hero_text }}</p>
-      <div class="hero-actions">
-        <a href="/admissions/" class="btn btn-primary">Book a Visit</a>
-        <a href="/about/" class="btn btn-secondary">Meet Our School</a>
-      </div>
-    </div>
-    <div class="hero-art">
-      <div class="blob hero-blob-1"></div>
-      <div class="blob hero-blob-2"></div>
-      <div class="blob hero-blob-3"></div>
-      <div class="hero-emoji-ring" aria-hidden="true">{{ hero_emoji }}</div>
-    </div>
-  </div>
-</section>
-
-<div class="trust-strip">
-  <div class="container trust-grid">
-    {% for stat in stats %}
-    <div><strong>{{ stat.number }}</strong><span>{{ stat.label }}</span></div>
-    {% endfor %}
-  </div>
-</div>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head center">
-      <h2>{{ features_heading }}</h2>
-      <p style="margin-left:auto;margin-right:auto;">{{ features_subtext }}</p>
-    </div>
-    <div class="feature-grid">
-      {% for f in features %}
-      <div class="feature-card">
-        <div class="feature-icon">{{ f.icon }}</div>
-        <h3>{{ f.title }}</h3>
-        <p>{{ f.text }}</p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-head center">
-      <h2>{{ programs_heading }}</h2>
-      <p style="margin-left:auto;margin-right:auto;">{{ programs_subtext }}</p>
-    </div>
-    <div class="program-grid">
-      {% for p in programs %}
-      <div class="program-card {{ p.colorClass }}">
-        <span class="age-tag">{{ p.age }}</span>
-        <h3>{{ p.title }}</h3>
-        <p>{{ p.text }}</p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head center">
-      <h2>A peek into our days</h2>
-      <p style="margin-left:auto;margin-right:auto;">More photos live in the <a href="/gallery/">full gallery</a>.</p>
-    </div>
-    <div class="gallery-grid">
-      <div class="tile tile-1 tall">🖍️</div>
-      <div class="tile tile-2">🧸</div>
-      <div class="tile tile-3">☀️</div>
-      <div class="tile tile-4 tall">🌻</div>
-      <div class="tile tile-5">📚</div>
-      <div class="tile tile-6">⚽</div>
-      <div class="tile tile-7">🎵</div>
-      <div class="tile tile-8">🐛</div>
-    </div>
-  </div>
-</section>
-
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-head center">
-      <h2>{{ testimonials_heading }}</h2>
-    </div>
-    <div class="testimonial-grid">
-      {% for t in testimonials %}
-      <div class="testimonial-card">
-        <p>{{ t.quote }}</p>
-        <div class="testimonial-name">{{ t.name }}</div>
-        <div>{{ t.role }}</div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="cta-banner">
-    <h2>{{ cta_heading }}</h2>
-    <p>{{ cta_text }}</p>
-    <a href="{{ cta_button_link }}" class="btn btn-light">{{ cta_button_text }}</a>
-  </div>
-</section>
