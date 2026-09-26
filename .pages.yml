@@ -39,7 +39,7 @@ content:
           - { name: age, label: "Age tag", type: string }
           - { name: title, label: "Program name", type: string }
           - { name: text, label: "Description", type: text }
-          - { name: colorClass, label: "Color", type: select, options: ["program-playgroup", "program-nursery", "program-primary"] }
+          - { name: colorClass, label: "Color", type: select, options: { values: ["program-playgroup", "program-nursery", "program-primary"] } }
       - { name: testimonials_heading, label: "Testimonials heading", type: string }
       - name: testimonials
         label: "Parent testimonials"
@@ -135,7 +135,7 @@ content:
         fields:
           - { name: emoji, label: "Emoji", type: string }
           - { name: label, label: "Label", type: string }
-          - { name: color, label: "Tile color", type: select, options: ["tile-1", "tile-2", "tile-3", "tile-4", "tile-5", "tile-6", "tile-7", "tile-8"] }
+          - { name: color, label: "Tile color", type: select, options: { values: ["tile-1", "tile-2", "tile-3", "tile-4", "tile-5", "tile-6", "tile-7", "tile-8"] } }
       - { name: cta_heading, label: "Bottom CTA heading", type: string }
       - { name: cta_text, label: "Bottom CTA text", type: text }
       - { name: cta_button_text, label: "CTA button text", type: string }
