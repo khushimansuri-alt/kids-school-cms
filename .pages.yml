@@ -8,6 +8,9 @@ content:
     type: file
     path: src/index.njk
     fields:
+      - { name: layout, type: hidden, default: "base.njk" }
+      - { name: title, type: hidden, default: "Home" }
+      - { name: nav, type: hidden, default: "home" }
       - { name: badge, label: "Top badge text", type: string }
       - { name: hero_heading, label: "Hero heading", type: string }
       - { name: hero_text, label: "Hero paragraph", type: text }
@@ -59,6 +62,9 @@ content:
     type: file
     path: src/about.njk
     fields:
+      - { name: layout, type: hidden, default: "base.njk" }
+      - { name: title, type: hidden, default: "About Us" }
+      - { name: nav, type: hidden, default: "about" }
       - { name: badge, label: "Top badge text", type: string }
       - { name: hero_heading, label: "Hero heading", type: string }
       - { name: hero_text, label: "Hero paragraph", type: text }
@@ -94,6 +100,9 @@ content:
     type: file
     path: src/admissions.njk
     fields:
+      - { name: layout, type: hidden, default: "base.njk" }
+      - { name: title, type: hidden, default: "Admissions" }
+      - { name: nav, type: hidden, default: "admissions" }
       - { name: badge, label: "Top badge text", type: string }
       - { name: hero_heading, label: "Hero heading", type: string }
       - { name: hero_text, label: "Hero paragraph", type: text }
@@ -125,6 +134,9 @@ content:
     type: file
     path: src/gallery.njk
     fields:
+      - { name: layout, type: hidden, default: "base.njk" }
+      - { name: title, type: hidden, default: "Gallery" }
+      - { name: nav, type: hidden, default: "gallery" }
       - { name: badge, label: "Top badge text", type: string }
       - { name: hero_heading, label: "Hero heading", type: string }
       - { name: hero_text, label: "Hero paragraph", type: text }
@@ -146,6 +158,9 @@ content:
     type: file
     path: src/contact.njk
     fields:
+      - { name: layout, type: hidden, default: "base.njk" }
+      - { name: title, type: hidden, default: "Contact" }
+      - { name: nav, type: hidden, default: "contact" }
       - { name: badge, label: "Top badge text", type: string }
       - { name: hero_heading, label: "Hero heading", type: string }
       - { name: hero_text, label: "Hero paragraph", type: text }
