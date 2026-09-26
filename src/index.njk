@@ -59,3 +59,70 @@ cta_text: "The best way to know if we're the right fit is to visit — no pressu
 cta_button_text: "Schedule a Visit"
 cta_button_link: "/admissions/"
 ---
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="badge">{{ badge }}</div>
+  <h1>{{ hero_heading }} <span>{{ hero_emoji }}</span></h1>
+  <p>{{ hero_text }}</p>
+  
+  <div class="stats-grid">
+    {% for stat in stats %}
+      <div class="stat-card">
+        <h3>{{ stat.number }}</h3>
+        <p>{{ stat.label }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="features">
+  <h2>{{ features_heading }}</h2>
+  <p>{{ features_subtext }}</p>
+  <div class="features-grid">
+    {% for feature in features %}
+      <div class="feature-card">
+        <span class="icon">{{ feature.icon }}</span>
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.text }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- PROGRAMS SECTION -->
+<section class="programs">
+  <h2>{{ programs_heading }}</h2>
+  <p>{{ programs_subtext }}</p>
+  <div class="programs-grid">
+    {% for program in programs %}
+      <div class="program-card {{ program.colorClass }}">
+        <span class="age-tag">{{ program.age }}</span>
+        <h3>{{ program.title }}</h3>
+        <p>{{ program.text }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section class="testimonials">
+  <h2>{{ testimonials_heading }}</h2>
+  <div class="testimonials-grid">
+    {% for item in testimonials %}
+      <div class="testimonial-card">
+        <p>"{{ item.quote }}"</p>
+        <strong>{{ item.name }}</strong>
+        <span>{{ item.role }}</span>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta">
+  <h2>{{ cta_heading }}</h2>
+  <p>{{ cta_text }}</p>
+  <a href="{{ cta_button_link }}" class="btn">{{ cta_button_text }}</a>
+</section>
