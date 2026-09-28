@@ -3,6 +3,14 @@ media:
   output: /img
 
 content:
+  - name: site
+    label: "⚙️ Site Settings (Logo)"
+    type: file
+    path: src/_data/site.json
+    fields:
+      - { name: name, label: "School name", type: string }
+      - { name: logo, label: "Logo", type: image }
+
   - name: home
     label: "🏠 Home Page"
     type: file
@@ -12,6 +20,15 @@ content:
       - { name: hero_heading, label: "Hero heading", type: string }
       - { name: hero_text, label: "Hero paragraph", type: text }
       - { name: hero_emoji, label: "Hero emoji", type: string }
+      - name: carousel
+        label: "Home slider (photos)"
+        type: object
+        list: true
+        fields:
+          - { name: image, label: "Photo", type: image }
+          - { name: alt, label: "Photo description (alt text)", type: string }
+          - { name: title, label: "Title", type: string }
+          - { name: caption, label: "Caption", type: string }
       - name: stats
         label: "Trust strip stats (3 numbers)"
         type: object
@@ -133,6 +150,7 @@ content:
         type: object
         list: true
         fields:
+          - { name: image, label: "Photo (optional)", type: image }
           - { name: emoji, label: "Emoji", type: string }
           - { name: label, label: "Label", type: string }
           - { name: color, label: "Tile color", type: select, options: { values: ["tile-1", "tile-2", "tile-3", "tile-4", "tile-5", "tile-6", "tile-7", "tile-8"] } }
