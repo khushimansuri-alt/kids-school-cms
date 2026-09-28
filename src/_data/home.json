@@ -3,6 +3,9 @@
   "hero_heading": "Welcome to Little Sparks",
   "hero_text": "Little Sparks is a play-first school for children aged 2 to 8, built around curiosity, kindness, and a whole lot of giggling.",
   "hero_emoji": "🧒🎨",
+  "carousel": [
+    {}
+  ],
   "stats": [
     {
       "number": "15 yrs",
