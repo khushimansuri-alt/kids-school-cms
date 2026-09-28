@@ -10,6 +10,13 @@ nav: gallery
     grid-auto-rows: 160px;
     gap: 1rem;
   }
+  .full-gallery .tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    display: block;
+  }
   @media (max-width: 900px) { .full-gallery { grid-template-columns: repeat(2, 1fr); } }
 </style>
 
@@ -25,7 +32,7 @@ nav: gallery
   <div class="container">
     <div class="full-gallery">
       {% for t in gallery.tiles %}
-      <div class="tile {{ t.color }}">{{ t.emoji }} {{ t.label }}</div>
+      <div class="tile {{ t.color }}">{% if t.image %}<img src="{{ t.image }}" alt="{{ t.label }}" loading="lazy">{% else %}{{ t.emoji }} {{ t.label }}{% endif %}</div>
       {% endfor %}
     </div>
   </div>
