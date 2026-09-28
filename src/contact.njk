@@ -2,21 +2,12 @@
 layout: base.njk
 title: Contact
 nav: contact
-badge: "Say hello"
-hero_heading: "We'd love to hear from you."
-hero_text: "Questions about admissions, a visit, or just want to know more? Send a note or drop by — someone's always happy to chat."
-
-address: "12 Maple Grove Lane, Green Park, Bhopal 462001"
-phone: "+910000000000"
-phone_display: "+91 00000 00000"
-email: "hello@littlesparks.school"
-hours: "Monday – Friday, 8:00am – 3:00pm"
 ---
 <section class="page-hero">
   <div class="container">
-    <span class="eyebrow-badge">{{ badge }}</span>
-    <h1>{{ hero_heading }}</h1>
-    <p>{{ hero_text }}</p>
+    <span class="eyebrow-badge">{{ contact.badge }}</span>
+    <h1>{{ contact.hero_heading }}</h1>
+    <p>{{ contact.hero_text }}</p>
   </div>
 </section>
 
@@ -48,28 +39,28 @@ hours: "Monday – Friday, 8:00am – 3:00pm"
         <div class="icon-dot" style="background:var(--coral);">📍</div>
         <div>
           <strong>Visit us</strong>
-          <p style="margin:0;">{{ address }}</p>
+          <p style="margin:0;">{{ contact.address }}</p>
         </div>
       </div>
       <div class="contact-info-row">
         <div class="icon-dot" style="background:var(--sky);">📞</div>
         <div>
           <strong>Call us</strong>
-          <p style="margin:0;"><a href="tel:{{ phone }}">{{ phone_display }}</a></p>
+          <p style="margin:0;"><a href="tel:{{ contact.phone }}">{{ contact.phone_display }}</a></p>
         </div>
       </div>
       <div class="contact-info-row">
         <div class="icon-dot" style="background:var(--leaf);">✉️</div>
         <div>
           <strong>Email us</strong>
-          <p style="margin:0;"><a href="mailto:{{ email }}">{{ email }}</a></p>
+          <p style="margin:0;"><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
         </div>
       </div>
       <div class="contact-info-row">
         <div class="icon-dot" style="background:var(--grape);">🕒</div>
         <div>
           <strong>School hours</strong>
-          <p style="margin:0;">{{ hours }}</p>
+          <p style="margin:0;">{{ contact.hours }}</p>
         </div>
       </div>
       <div class="map-placeholder">Map goes here</div>

@@ -6,7 +6,7 @@ content:
   - name: home
     label: "🏠 Home Page"
     type: file
-    path: src/index.njk
+    path: src/_data/home.json
     fields:
       - { name: badge, label: "Top badge text", type: string }
       - { name: hero_heading, label: "Hero heading", type: string }
@@ -14,7 +14,8 @@ content:
       - { name: hero_emoji, label: "Hero emoji", type: string }
       - name: stats
         label: "Trust strip stats (3 numbers)"
-        type: list
+        type: object
+        list: true
         fields:
           - { name: number, label: "Number", type: string }
           - { name: label, label: "Label", type: string }
@@ -22,7 +23,8 @@ content:
       - { name: features_subtext, label: "Features section subtext", type: text }
       - name: features
         label: "Feature cards"
-        type: list
+        type: object
+        list: true
         fields:
           - { name: icon, label: "Emoji icon", type: string }
           - { name: title, label: "Title", type: string }
@@ -31,16 +33,18 @@ content:
       - { name: programs_subtext, label: "Programs section subtext", type: text }
       - name: programs
         label: "Program cards"
-        type: list
+        type: object
+        list: true
         fields:
           - { name: age, label: "Age tag", type: string }
           - { name: title, label: "Program name", type: string }
           - { name: text, label: "Description", type: text }
-          - { name: colorClass, label: "Color", type: select, options: ["program-playgroup", "program-nursery", "program-primary"] }
+          - { name: colorClass, label: "Color", type: select, options: { values: ["program-playgroup", "program-nursery", "program-primary"] } }
       - { name: testimonials_heading, label: "Testimonials heading", type: string }
       - name: testimonials
         label: "Parent testimonials"
-        type: list
+        type: object
+        list: true
         fields:
           - { name: quote, label: "Quote", type: text }
           - { name: name, label: "Parent name", type: string }
@@ -53,7 +57,7 @@ content:
   - name: about
     label: "ℹ️ About Page"
     type: file
-    path: src/about.njk
+    path: src/_data/about.json
     fields:
       - { name: badge, label: "Top badge text", type: string }
       - { name: hero_heading, label: "Hero heading", type: string }
@@ -63,7 +67,8 @@ content:
       - { name: approach_text_2, label: "Approach paragraph 2", type: text }
       - name: values
         label: "School values"
-        type: list
+        type: object
+        list: true
         fields:
           - { name: number, label: "Number", type: string }
           - { name: title, label: "Title", type: string }
@@ -73,7 +78,8 @@ content:
       - { name: teachers_subtext, label: "Teachers section subtext", type: text }
       - name: teachers
         label: "Teacher / staff cards"
-        type: list
+        type: object
+        list: true
         fields:
           - { name: icon, label: "Emoji icon", type: string }
           - { name: name, label: "Name", type: string }
@@ -86,14 +92,15 @@ content:
   - name: admissions
     label: "📝 Admissions Page"
     type: file
-    path: src/admissions.njk
+    path: src/_data/admissions.json
     fields:
       - { name: badge, label: "Top badge text", type: string }
       - { name: hero_heading, label: "Hero heading", type: string }
       - { name: hero_text, label: "Hero paragraph", type: text }
       - name: steps
         label: "Admission steps"
-        type: list
+        type: object
+        list: true
         fields:
           - { name: title, label: "Step title", type: string }
           - { name: text, label: "Step description", type: text }
@@ -101,7 +108,8 @@ content:
       - { name: fees_subtext, label: "Fees section subtext", type: text }
       - name: fees
         label: "Fee table rows"
-        type: list
+        type: object
+        list: true
         fields:
           - { name: program, label: "Program name", type: string }
           - { name: age, label: "Age group", type: string }
@@ -115,18 +123,19 @@ content:
   - name: gallery
     label: "🖼️ Gallery Page"
     type: file
-    path: src/gallery.njk
+    path: src/_data/gallery.json
     fields:
       - { name: badge, label: "Top badge text", type: string }
       - { name: hero_heading, label: "Hero heading", type: string }
       - { name: hero_text, label: "Hero paragraph", type: text }
       - name: tiles
         label: "Gallery tiles"
-        type: list
+        type: object
+        list: true
         fields:
           - { name: emoji, label: "Emoji", type: string }
           - { name: label, label: "Label", type: string }
-          - { name: color, label: "Tile color", type: select, options: ["tile-1", "tile-2", "tile-3", "tile-4", "tile-5", "tile-6", "tile-7", "tile-8"] }
+          - { name: color, label: "Tile color", type: select, options: { values: ["tile-1", "tile-2", "tile-3", "tile-4", "tile-5", "tile-6", "tile-7", "tile-8"] } }
       - { name: cta_heading, label: "Bottom CTA heading", type: string }
       - { name: cta_text, label: "Bottom CTA text", type: text }
       - { name: cta_button_text, label: "CTA button text", type: string }
@@ -135,7 +144,7 @@ content:
   - name: contact
     label: "📞 Contact Page"
     type: file
-    path: src/contact.njk
+    path: src/_data/contact.json
     fields:
       - { name: badge, label: "Top badge text", type: string }
       - { name: hero_heading, label: "Hero heading", type: string }

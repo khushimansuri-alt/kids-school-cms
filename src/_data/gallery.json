@@ -1,0 +1,71 @@
+{
+  "badge": "Life at Little Sparks",
+  "hero_heading": "A few moments from a normal week.",
+  "hero_text": "Replace these color tiles with real photos of your classrooms, playground, and events once you're ready to launch.",
+  "tiles": [
+    {
+      "color": "tile-1",
+      "emoji": "🖍️",
+      "label": "Art Corner"
+    },
+    {
+      "color": "tile-2",
+      "emoji": "🧸",
+      "label": "Story Time"
+    },
+    {
+      "color": "tile-3",
+      "emoji": "☀️",
+      "label": "Morning Circle"
+    },
+    {
+      "color": "tile-4",
+      "emoji": "🌻",
+      "label": "Garden Play"
+    },
+    {
+      "color": "tile-5",
+      "emoji": "📚",
+      "label": "Reading Nook"
+    },
+    {
+      "color": "tile-6",
+      "emoji": "⚽",
+      "label": "Playground"
+    },
+    {
+      "color": "tile-7",
+      "emoji": "🎵",
+      "label": "Music Circle"
+    },
+    {
+      "color": "tile-8",
+      "emoji": "🐛",
+      "label": "Nature Walk"
+    },
+    {
+      "color": "tile-1",
+      "emoji": "🎂",
+      "label": "Birthday Day"
+    },
+    {
+      "color": "tile-2",
+      "emoji": "🍎",
+      "label": "Lunchtime"
+    },
+    {
+      "color": "tile-3",
+      "emoji": "🧪",
+      "label": "Little Scientists"
+    },
+    {
+      "color": "tile-4",
+      "emoji": "🎭",
+      "label": "Puppet Show"
+    }
+  ],
+  "cta_heading": "Want to see all this in person?",
+  "cta_text": "Photos only tell half the story — come hear the noise and laughter for yourself.",
+  "cta_button_text": "Book a Visit",
+  "cta_button_link": "/admissions/"
+}
