@@ -23,6 +23,49 @@ nav: home
   </div>
 </section>
 
+{% if home.carousel and home.carousel.length %}
+<style>
+  .carousel { position: relative; }
+  .carousel-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 1rem; scrollbar-width: none; }
+  .carousel-track::-webkit-scrollbar { display: none; }
+  .slide { flex: 0 0 100%; scroll-snap-align: start; margin: 0; position: relative; border-radius: 24px; overflow: hidden; }
+  .slide img { width: 100%; height: 420px; object-fit: cover; display: block; }
+  .slide figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.2rem 1.5rem; color: #fff; background: linear-gradient(transparent, rgba(0,0,0,.65)); }
+  .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,.9); font-size: 1.4rem; cursor: pointer; z-index: 2; }
+  .carousel-btn.prev { left: 12px; }
+  .carousel-btn.next { right: 12px; }
+  @media (max-width: 700px) { .slide img { height: 240px; } }
+</style>
+<section class="section">
+  <div class="container carousel">
+    <button class="carousel-btn prev" aria-label="Previous">‹</button>
+    <div class="carousel-track">
+      {% for s in home.carousel %}
+      <figure class="slide">
+        <img src="{{ s.image }}" alt="{{ s.alt }}" loading="{% if loop.first %}eager{% else %}lazy{% endif %}">
+        {% if s.title or s.caption %}<figcaption><strong>{{ s.title }}</strong> {{ s.caption }}</figcaption>{% endif %}
+      </figure>
+      {% endfor %}
+    </div>
+    <button class="carousel-btn next" aria-label="Next">›</button>
+  </div>
+</section>
+<script>
+  (function () {
+    var track = document.querySelector('.carousel-track');
+    if (!track) return;
+    function go(dir) {
+      var end = track.scrollLeft + track.clientWidth >= track.scrollWidth - 5;
+      if (dir > 0 && end) track.scrollTo({ left: 0 });
+      else track.scrollBy({ left: dir * track.clientWidth });
+    }
+    document.querySelector('.carousel-btn.prev').onclick = function () { go(-1); };
+    document.querySelector('.carousel-btn.next').onclick = function () { go(1); };
+    setInterval(function () { go(1); }, 5000);
+  })();
+</script>
+{% endif %}
+
 <div class="trust-strip">
   <div class="container trust-grid">
     {% for stat in home.stats %}
@@ -74,14 +117,11 @@ nav: home
       <p style="margin-left:auto;margin-right:auto;">More photos live in the <a href="/gallery/">full gallery</a>.</p>
     </div>
     <div class="gallery-grid">
-      <div class="tile tile-1 tall">🖍️</div>
-      <div class="tile tile-2">🧸</div>
-      <div class="tile tile-3">☀️</div>
-      <div class="tile tile-4 tall">🌻</div>
-      <div class="tile tile-5">📚</div>
-      <div class="tile tile-6">⚽</div>
-      <div class="tile tile-7">🎵</div>
-      <div class="tile tile-8">🐛</div>
+      {% for t in gallery.tiles %}{% if loop.index <= 8 %}
+      <div class="tile tile-{{ loop.index }}{% if loop.index == 1 or loop.index == 4 %} tall{% endif %}">
+        {% if t.image %}<img src="{{ t.image }}" alt="{{ t.label }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;display:block;">{% else %}{{ t.emoji }}{% endif %}
+      </div>
+      {% endif %}{% endfor %}
     </div>
   </div>
 </section>
