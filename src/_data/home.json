@@ -4,7 +4,15 @@
   "hero_text": "Little Sparks is a play-first school for children aged 2 to 8, built around curiosity, kindness, and a whole lot of giggling.",
   "hero_emoji": "🧒🎨",
   "carousel": [
-    {}
+    {
+      "image": "/img/ChatGPT Image Sep 28, 2026, 01_21_45 PM.png"
+    },
+    {
+      "image": "/img/WhatsApp Image 2026-07-30 at 3.08.36 PM (3).jpeg"
+    },
+    {
+      "image": "/img/WhatsApp Image 2026-07-30 at 3.08.35 PM.jpeg"
+    }
   ],
   "stats": [
     {
